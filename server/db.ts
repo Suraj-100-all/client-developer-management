@@ -137,7 +137,7 @@ class DatabaseStore {
     // 1 Admin
     const admin: UserRecord = {
       id: 'usr-admin-1',
-      name: 'Alex Morgan',
+      name: 'SRJ Developer',
       email: 'admin@velozity.com',
       passwordHash: defaultPasswordHash,
       role: 'ADMIN',
@@ -148,7 +148,7 @@ class DatabaseStore {
     // 2 Project Managers
     const pmSarah: UserRecord = {
       id: 'usr-pm-1',
-      name: 'Sarah Jenkins',
+      name: 'Saroj',
       email: 'pm.sarah@velozity.com',
       passwordHash: defaultPasswordHash,
       role: 'PROJECT_MANAGER',
@@ -158,7 +158,7 @@ class DatabaseStore {
 
     const pmMarcus: UserRecord = {
       id: 'usr-pm-2',
-      name: 'Marcus Vance',
+      name: 'Vikas Sharma',
       email: 'pm.marcus@velozity.com',
       passwordHash: defaultPasswordHash,
       role: 'PROJECT_MANAGER',
@@ -179,7 +179,7 @@ class DatabaseStore {
 
     const devElena: UserRecord = {
       id: 'usr-dev-2',
-      name: 'Elena Rostova',
+      name: 'Abhi Sharma',
       email: 'dev.elena@velozity.com',
       passwordHash: defaultPasswordHash,
       role: 'DEVELOPER',
@@ -189,7 +189,7 @@ class DatabaseStore {
 
     const devAlex: UserRecord = {
       id: 'usr-dev-3',
-      name: 'Alex Chen',
+      name: 'Alok',
       email: 'dev.alex@velozity.com',
       passwordHash: defaultPasswordHash,
       role: 'DEVELOPER',
@@ -613,7 +613,7 @@ class DatabaseStore {
         actionType: 'STATUS_CHANGE',
         oldValue: 'TODO',
         newValue: 'IN_PROGRESS',
-        formattedMessage: 'Alex moved Task #106 from To Do → In Progress',
+        formattedMessage: 'Alok moved Task #106 from To Do → In Progress',
         createdAt: new Date(now.getTime() - 3 * 60 * 60 * 1000).toISOString(),
       },
       {
@@ -624,7 +624,7 @@ class DatabaseStore {
         actionType: 'STATUS_CHANGE',
         oldValue: 'IN_REVIEW',
         newValue: 'DONE',
-        formattedMessage: 'Elena moved Task #104 from In Review → Done',
+        formattedMessage: 'Abhi Sharma moved Task #104 from In Review → Done',
         createdAt: new Date(now.getTime() - 5 * 60 * 60 * 1000).toISOString(),
       },
       {
@@ -657,7 +657,7 @@ class DatabaseStore {
         actionType: 'ASSIGNMENT',
         oldValue: 'unassigned',
         newValue: 'Ravi Kumar',
-        formattedMessage: 'Sarah Jenkins assigned Task #101 to Ravi Kumar',
+        formattedMessage: 'Saroj assigned Task #101 to Ravi Kumar',
         createdAt: new Date(now.getTime() - 14 * 60 * 60 * 1000).toISOString(),
       },
       {
@@ -667,8 +667,8 @@ class DatabaseStore {
         userId: pmMarcus.id,
         actionType: 'ASSIGNMENT',
         oldValue: 'unassigned',
-        newValue: 'Elena Rostova',
-        formattedMessage: 'Marcus Vance assigned Task #201 to Elena Rostova',
+        newValue: 'Abhi Sharma',
+        formattedMessage: 'Vikas Sharma assigned Task #201 to Abhi Sharma',
         createdAt: new Date(now.getTime() - 20 * 60 * 60 * 1000).toISOString(),
       },
     ];
@@ -680,7 +680,7 @@ class DatabaseStore {
         userId: devRavi.id,
         taskId: t1.id,
         title: 'New Task Assigned',
-        message: 'Sarah Jenkins assigned you to "Implement WebSocket depth-of-book orderbook ticker".',
+        message: 'Saroj assigned you to "Implement WebSocket depth-of-book orderbook ticker".',
         isRead: false,
         createdAt: new Date(now.getTime() - 14 * 60 * 60 * 1000).toISOString(),
       },
