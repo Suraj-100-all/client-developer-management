@@ -1,0 +1,6 @@
+{
+  "name": "Velozity Client Project Dashboard",
+  "description": "Real-time client project management dashboard with role-based access control, live WebSocket activity feed, scheduled overdue task engine, and notifications.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
