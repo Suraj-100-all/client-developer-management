@@ -132,12 +132,12 @@ Use the **1-Click Assessment Role Switcher** in the top navigation bar to test e
 
 | Name | Role | ID | Responsibilities & Test Scope |
 | :--- | :--- | :--- | :--- |
-| **Alex Morgan** | `ADMIN` | `usr-admin-1` | Global view of all 4 projects, all tasks, live WebSocket online count, global activity feed. |
-| **Sarah Jenkins** | `PROJECT_MANAGER` | `usr-pm-1` | Owns Projects 1 & 2. Cannot see or edit Projects 3 & 4. Receives notifications when tasks enter Review. |
-| **Marcus Vance** | `PROJECT_MANAGER` | `usr-pm-2` | Owns Projects 3 & 4. Cannot see or edit Projects 1 & 2. |
+| **SRJ Developer** | `ADMIN` | `usr-admin-1` | Global view of all 4 projects, all tasks, live WebSocket online count, global activity feed. |
+| **Saroj** | `PROJECT_MANAGER` | `usr-pm-1` | Owns Projects 1 & 2. Cannot see or edit Projects 3 & 4. Receives notifications when tasks enter Review. |
+| **Vikas Sharma** | `PROJECT_MANAGER` | `usr-pm-2` | Owns Projects 3 & 4. Cannot see or edit Projects 1 & 2. |
 | **Ravi Kumar** | `DEVELOPER` | `usr-dev-1` | Assigned 4 tasks (including overdue #101). Cannot see other devs' tasks. |
-| **Elena Rostova** | `DEVELOPER` | `usr-dev-2` | Assigned tasks on Project 1 & 3. |
-| **Alex Chen** | `DEVELOPER` | `usr-dev-3` | Assigned tasks on Project 2 & 4. |
+| **Abhi Sharma** | `DEVELOPER` | `usr-dev-2` | Assigned tasks on Project 1 & 3. |
+| **Alok** | `DEVELOPER` | `usr-dev-3` | Assigned tasks on Project 2 & 4. |
 | **Priya Patel** | `DEVELOPER` | `usr-dev-4` | Assigned tasks on Project 2 & 3. |
 
 ---
