@@ -22,8 +22,8 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 // Initial default seed accounts for quick testing
 export const SEED_ACCOUNTS = [
   { id: 'usr-admin-1', name: 'Suraj', role: 'ADMIN', email: 'admin@velozity.com', label: 'Admin (Full Access)' },
-  { id: 'usr-pm-1', name: 'Saroj Jenkins', role: 'PROJECT_MANAGER', email: 'pm.Saroj@velozity.com', label: 'PM 1 (Fintech & LogiTrack)' },
-  { id: 'usr-pm-2', name: 'Vikas Vance', role: 'PROJECT_MANAGER', email: 'pm.Vikas@velozity.com', label: 'PM 2 (HealthSync & AeroSky)' },
+  { id: 'usr-pm-1', name: 'Saroj', role: 'PROJECT_MANAGER', email: 'pm.Saroj@velozity.com', label: 'PM 1 (Fintech & LogiTrack)' },
+  { id: 'usr-pm-2', name: 'Vikas Sharma', role: 'PROJECT_MANAGER', email: 'pm.Vikas@velozity.com', label: 'PM 2 (HealthSync & AeroSky)' },
   { id: 'usr-dev-1', name: 'Ravi Kumar', role: 'DEVELOPER', email: 'dev.ravi@velozity.com', label: 'Dev 1 (Ravi - Senior Dev)' },
   { id: 'usr-dev-2', name: 'Abhi Sharma', role: 'DEVELOPER', email: 'dev.Abhi@velozity.com', label: 'Dev 2 (Abhi - Frontend)' },
   { id: 'usr-dev-3', name: 'Alok', role: 'DEVELOPER', email: 'dev.Alok@velozity.com', label: 'Dev 3 (Alok - Backend)' },
