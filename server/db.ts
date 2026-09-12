@@ -146,20 +146,20 @@ class DatabaseStore {
     };
 
     // 2 Project Managers
-    const pmSarah: UserRecord = {
+    const pmSaroj: UserRecord = {
       id: 'usr-pm-1',
       name: 'Saroj',
-      email: 'pm.sarah@velozity.com',
+      email: 'pm.Saroj@velozity.com',
       passwordHash: defaultPasswordHash,
       role: 'PROJECT_MANAGER',
       avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
       createdAt: past4Days,
     };
 
-    const pmMarcus: UserRecord = {
+    const pmVikas: UserRecord = {
       id: 'usr-pm-2',
       name: 'Vikas Sharma',
-      email: 'pm.marcus@velozity.com',
+      email: 'pm.Vikas@velozity.com',
       passwordHash: defaultPasswordHash,
       role: 'PROJECT_MANAGER',
       avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
@@ -177,20 +177,20 @@ class DatabaseStore {
       createdAt: past4Days,
     };
 
-    const devElena: UserRecord = {
+    const devAbhi: UserRecord = {
       id: 'usr-dev-2',
       name: 'Abhi Sharma',
-      email: 'dev.elena@velozity.com',
+      email: 'dev.Abhi@velozity.com',
       passwordHash: defaultPasswordHash,
       role: 'DEVELOPER',
       avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
       createdAt: past4Days,
     };
 
-    const devAlex: UserRecord = {
+    const devAlok: UserRecord = {
       id: 'usr-dev-3',
       name: 'Alok',
-      email: 'dev.alex@velozity.com',
+      email: 'dev.Alok@velozity.com',
       passwordHash: defaultPasswordHash,
       role: 'DEVELOPER',
       avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
@@ -207,7 +207,7 @@ class DatabaseStore {
       createdAt: past4Days,
     };
 
-    [admin, pmSarah, pmMarcus, devRavi, devElena, devAlex, devPriya].forEach((u) => {
+    [admin, pmSaroj, pmVikas, devRavi, devAbhi, devAlok, devPriya].forEach((u) => {
       this.users.set(u.id, u);
     });
 
@@ -236,13 +236,13 @@ class DatabaseStore {
 
     [client1, client2, client3].forEach((c) => this.clients.set(c.id, c));
 
-    // Projects (At least 3 projects, Sarah PM owns 2, Marcus PM owns 2)
+    // Projects (At least 3 projects, Saroj PM owns 2, Vikas PM owns 2)
     const proj1: ProjectRecord = {
       id: 'proj-1',
       title: 'Fintech Real-Time Trading Portal',
       description: 'High-frequency order routing interface with real-time Level 2 market data feeds and portfolio analytics.',
       clientId: client1.id,
-      createdByPmId: pmSarah.id,
+      createdByPmId: pmSaroj.id,
       createdAt: past4Days,
       updatedAt: past2Days,
     };
@@ -252,7 +252,7 @@ class DatabaseStore {
       title: 'HealthSync Patient Care Platform',
       description: 'HIPAA-compliant telemedicine dashboard connecting patients with specialists, e-prescriptions, and lab telemetry.',
       clientId: client2.id,
-      createdByPmId: pmMarcus.id,
+      createdByPmId: pmVikas.id,
       createdAt: past4Days,
       updatedAt: past2Days,
     };
@@ -262,7 +262,7 @@ class DatabaseStore {
       title: 'LogiTrack Supply Chain Intelligence',
       description: 'Cross-border container tracking dashboard with route optimization, automated customs clearance, and IoT sensors.',
       clientId: client3.id,
-      createdByPmId: pmSarah.id,
+      createdByPmId: pmSaroj.id,
       createdAt: past4Days,
       updatedAt: past2Days,
     };
@@ -272,7 +272,7 @@ class DatabaseStore {
       title: 'AeroSky Aircraft Telemetry',
       description: 'Fleet health monitoring, predictive maintenance sensor ingestion, and pilot digital dispatch portal.',
       clientId: client1.id,
-      createdByPmId: pmMarcus.id,
+      createdByPmId: pmVikas.id,
       createdAt: past4Days,
       updatedAt: past2Days,
     };
@@ -280,7 +280,7 @@ class DatabaseStore {
     [proj1, proj2, proj3, proj4].forEach((p) => this.projects.set(p.id, p));
 
     // Tasks (At least 5+ tasks each, with 2 already in OVERDUE state)
-    // Project 1 Tasks (PM: Sarah)
+    // Project 1 Tasks (PM: Saroj)
     const t1: TaskRecord = {
       id: 'task-101',
       taskNumber: 101,
@@ -317,7 +317,7 @@ class DatabaseStore {
       title: 'Latency benchmarks & order slip calculation engine',
       description: 'Profile sub-millisecond execution logs and aggregate P99 latency percentiles across dark pools.',
       projectId: proj1.id,
-      assignedToDevId: devElena.id,
+      assignedToDevId: devAbhi.id,
       status: 'TODO',
       priority: 'MEDIUM',
       dueDate: future7Days,
@@ -332,7 +332,7 @@ class DatabaseStore {
       title: 'Fix margin call alert banner flickering on window resize',
       description: 'Debounce resize observer and synchronize state transition to prevent visual shudder.',
       projectId: proj1.id,
-      assignedToDevId: devElena.id,
+      assignedToDevId: devAbhi.id,
       status: 'DONE',
       priority: 'LOW',
       dueDate: past2Days,
@@ -347,7 +347,7 @@ class DatabaseStore {
       title: 'CSV & PDF export for audit compliance reports',
       description: 'Generate streaming PDF transaction summaries formatted for SEC and FINRA quarterly audits.',
       projectId: proj1.id,
-      assignedToDevId: devAlex.id,
+      assignedToDevId: devAlok.id,
       status: 'TODO',
       priority: 'MEDIUM',
       dueDate: future4Days,
@@ -362,7 +362,7 @@ class DatabaseStore {
       title: 'Database connection pool tuning for peak trading volume',
       description: 'Optimize max connections, statement timeout, and idle timeout on RDS PostgreSQL cluster.',
       projectId: proj1.id,
-      assignedToDevId: devAlex.id,
+      assignedToDevId: devAlok.id,
       status: 'IN_PROGRESS',
       priority: 'CRITICAL',
       dueDate: future2Days,
@@ -371,17 +371,17 @@ class DatabaseStore {
       updatedAt: past2Days,
     };
 
-    // Project 2 Tasks (PM: Marcus)
+    // Project 2 Tasks (PM: Vikas)
     const t7: TaskRecord = {
       id: 'task-201',
       taskNumber: 201,
       title: 'HIPAA end-to-end encrypted video consultation room',
       description: 'Establish WebRTC peer-to-peer audio/video with selective forwarding unit and cryptographic key exchange.',
       projectId: proj2.id,
-      assignedToDevId: devElena.id,
+      assignedToDevId: devAbhi.id,
       status: 'IN_PROGRESS',
       priority: 'CRITICAL',
-      dueDate: past4Days, // OVERDUE TASK #2 (Assigned to Elena)
+      dueDate: past4Days, // OVERDUE TASK #2 (Assigned to Abhi)
       isOverdue: true,
       createdAt: past4Days,
       updatedAt: past2Days,
@@ -408,7 +408,7 @@ class DatabaseStore {
       title: 'E-Prescription pharmacy network gateway integration',
       description: 'Validate Surescripts standard EDI messages, handle medication interaction warnings.',
       projectId: proj2.id,
-      assignedToDevId: devAlex.id,
+      assignedToDevId: devAlok.id,
       status: 'TODO',
       priority: 'HIGH',
       dueDate: future4Days,
@@ -447,14 +447,14 @@ class DatabaseStore {
       updatedAt: past2Days,
     };
 
-    // Project 3 Tasks (PM: Sarah)
+    // Project 3 Tasks (PM: Saroj)
     const t12: TaskRecord = {
       id: 'task-301',
       taskNumber: 301,
       title: 'Vessel AIS satellite telemetry parser and geo-fence alerts',
       description: 'Ingest NMEA AIS sentences from orbital satellites, compute estimated port arrival times.',
       projectId: proj3.id,
-      assignedToDevId: devAlex.id,
+      assignedToDevId: devAlok.id,
       status: 'IN_PROGRESS',
       priority: 'CRITICAL',
       dueDate: future2Days,
@@ -499,7 +499,7 @@ class DatabaseStore {
       title: 'Bill of Lading blockchain proof of possession',
       description: 'Implement distributed ledger smart contract tokenization for electronic title transfers.',
       projectId: proj3.id,
-      assignedToDevId: devElena.id,
+      assignedToDevId: devAbhi.id,
       status: 'TODO',
       priority: 'HIGH',
       dueDate: future14Days,
@@ -523,14 +523,14 @@ class DatabaseStore {
       updatedAt: past2Days,
     };
 
-    // Project 4 Tasks (PM: Marcus)
+    // Project 4 Tasks (PM: Vikas)
     const t17: TaskRecord = {
       id: 'task-401',
       taskNumber: 401,
       title: 'Turbofan engine vibration spectrum FFT analysis module',
       description: 'Run Fast Fourier Transform on high-frequency vibration sensors to predict bearing fatigue.',
       projectId: proj4.id,
-      assignedToDevId: devAlex.id,
+      assignedToDevId: devAlok.id,
       status: 'IN_PROGRESS',
       priority: 'CRITICAL',
       dueDate: future4Days,
@@ -545,7 +545,7 @@ class DatabaseStore {
       title: 'Cockpit digital flight bag electronic checklist sync',
       description: 'Synchronize pre-flight check progress offline-first between tablet devices and dispatch.',
       projectId: proj4.id,
-      assignedToDevId: devElena.id,
+      assignedToDevId: devAbhi.id,
       status: 'TODO',
       priority: 'MEDIUM',
       dueDate: future7Days,
@@ -609,7 +609,7 @@ class DatabaseStore {
         id: 'act-5',
         taskId: t6.id,
         projectId: proj1.id,
-        userId: devAlex.id,
+        userId: devAlok.id,
         actionType: 'STATUS_CHANGE',
         oldValue: 'TODO',
         newValue: 'IN_PROGRESS',
@@ -620,7 +620,7 @@ class DatabaseStore {
         id: 'act-6',
         taskId: t4.id,
         projectId: proj1.id,
-        userId: devElena.id,
+        userId: devAbhi.id,
         actionType: 'STATUS_CHANGE',
         oldValue: 'IN_REVIEW',
         newValue: 'DONE',
@@ -653,7 +653,7 @@ class DatabaseStore {
         id: 'act-9',
         taskId: t1.id,
         projectId: proj1.id,
-        userId: pmSarah.id,
+        userId: pmSaroj.id,
         actionType: 'ASSIGNMENT',
         oldValue: 'unassigned',
         newValue: 'Ravi Kumar',
@@ -664,7 +664,7 @@ class DatabaseStore {
         id: 'act-10',
         taskId: t7.id,
         projectId: proj2.id,
-        userId: pmMarcus.id,
+        userId: pmVikas.id,
         actionType: 'ASSIGNMENT',
         oldValue: 'unassigned',
         newValue: 'Abhi Sharma',
@@ -686,7 +686,7 @@ class DatabaseStore {
       },
       {
         id: 'notif-2',
-        userId: pmSarah.id,
+        userId: pmSaroj.id,
         taskId: t2.id,
         title: 'Task Ready for Review',
         message: 'Ravi Kumar moved Task #102 "Multi-factor biometric authentication handshake" to In Review.',
@@ -695,7 +695,7 @@ class DatabaseStore {
       },
       {
         id: 'notif-3',
-        userId: pmMarcus.id,
+        userId: pmVikas.id,
         taskId: t8.id,
         title: 'Task Ready for Review',
         message: 'Priya Patel moved Task #202 "Patient digital consent e-signature widget" to In Review.',
@@ -704,7 +704,7 @@ class DatabaseStore {
       },
       {
         id: 'notif-4',
-        userId: devElena.id,
+        userId: devAbhi.id,
         taskId: t7.id,
         title: 'Task Overdue Alert',
         message: 'Task #201 "HIPAA end-to-end encrypted video consultation room" is past its due date.',
